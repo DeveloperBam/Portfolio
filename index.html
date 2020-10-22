@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brandon Waine | Portfolio</title>
+  <title>Brandon Waine | Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container">
       <div class="logocontainer">
-        <!--<input class="container_toggle" type="checkbox" id="switch" name="mode">
-        <label for="switch">Toggle</label>-->
         <h1 class="logotext"> Brandon Waine </h1>
       </div>
       <nav>
         <ul class="snip1168">
-          <li class="current"><a href="home.html">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="about.html"> About </a>
+            <div class="dropdown-content">
+              <a href="#">Graphic Design</a>
+              <a href="about/photography.html">Photography</a>
+              <a href="#">Programming</a>
+              <a href="#">Hardware</a>
+            </div>
+          </li>
           <li><a href="#">Work</a></li>
           <li><a href="#">CV</a></li>
         </ul>
@@ -25,7 +31,7 @@
     </div>
   </header>
    <!-- Site Jumbotron -->
-  <div class="jumbo">
+  <div class="jumbo fade-in">
     <div class="hero">
       <img src="media/portrait.jpg" alt="Portrait" class="portrait">
       <h1 class="jumboh1"> I drink coffee, <br> create things <br> and sleep. </h1>
@@ -39,7 +45,7 @@
     <img class="transition" src="media/transition.svg" alt="New section transition">
     <div class="workpreviewsection">
       <img src="https://via.placeholder.com/400x300" alt="">
-      <h1>The None-Stop Coffee Shop</h1>
+      <h1>The Non-Stop Coffee Shop</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident blanditiis, aliquid cupiditate eos porro neque accusantium magni harum nam voluptatem ab quia amet repudiandae repellendus. Id officia perferendis impedit quam.</p>
       <a href="#"><button>View More</button></a>
     </div>
@@ -60,7 +66,7 @@
       <p class="footer-links">
         <a class="link-1" href="index.html">Home</a>
 
-        <a href="#">About</a>
+        <a href="about.html">About</a>
 
         <a href="#">Work</a>
 

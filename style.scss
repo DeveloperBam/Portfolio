@@ -38,21 +38,19 @@ html body {
                         display: inline-block;
                         margin-left: 70px;
                         padding-top: 60px;
+                        width: 50px;
                         a {
                             color: var(--darkmode-text-primary);
                             text-decoration: none;
                             text-transform: uppercase;
                         }
                     }
+                  } 
                 }
             }
         }
     }
-    header::after {
-        content: '';
-        display: table;
-        clear: both;
-    }
+
     .jumbo {
         position: relative;
         text-align: center;
@@ -83,7 +81,7 @@ html body {
             }
         }
     }
-    .workpreview {
+    .workpreview, .gallery {
         background: #ffffff;
         height: auto;
         padding-bottom: 100px;
@@ -108,23 +106,110 @@ html body {
                 line-height: 2em;
             }
 
-            a {
-                button {
-                    border: none;
-                    border-radius: 0;
-                    padding: 10px 50px;
-                    background: #151520;
-                    text-decoration: none;
-                    color: white;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    letter-spacing: .1em;
-                    cursor: pointer;
-                    margin-top: 70px;
-                }
-            }
+          a {
+              button {
+                  border: none;
+                  border-radius: 0;
+                  padding: 10px 50px;
+                  background: #151520;
+                  text-decoration: none;
+                  color: white;
+                  font-weight: 700;
+                  text-transform: uppercase;
+                  letter-spacing: .1em;
+                  cursor: pointer;
+                  margin-top: 70px;
+              }
+          }
         }
-    }
+
+}     
+
+.gallery {
+  text-align: center;
+  h1 {
+    padding: 200px;
+  }
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 @media (max-width: $breakpoint-tablet) {
@@ -194,8 +279,64 @@ html body {
     }
 }
 
-// Imported CSS
-  
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border-color: #ff8800;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+    opacity: 0;
+    margin-top: 200px;
+	}
+	100% {
+    opacity: 1;
+    margin-top: 100px;
+	}
+}
   .footer-distributed {
     overflow-x: hidden;
     background-color: #151520;
@@ -204,6 +345,7 @@ html body {
     width: 100%;
     text-align: left;
     font: normal 16px sans-serif;
+    font-weight: 400;
     padding: 45px 50px;
   }
   
@@ -361,7 +503,6 @@ input[type=checkbox] {
   }
   
   .snip1168 {
-    font-family: 'Raleway', Arial, sans-serif;
     text-align: center;
     text-transform: uppercase;
     font-weight: 500;
@@ -416,4 +557,7 @@ input[type=checkbox] {
   .snip1168 .current a:after {
     max-width: 100%;
   }
-  
+
+#returnbtn {
+  width: 100px;
+}
